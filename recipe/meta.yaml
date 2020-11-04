@@ -11,15 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6.0
+    - python >=3.6
     - pip
   run:
-    - python >=3.6.0
+    - python >=3.6
     - dask
     - zarr
     - xarray
@@ -51,3 +51,5 @@ about:
 extra:
   recipe-maintainers:
     - davidbrochart
+    - TomAugspurger
+    - rabernat
