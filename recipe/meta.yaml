@@ -1,5 +1,5 @@
 {% set name = "rechunker" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 56377a380acad90a87d3482dd6b7851e557bd0d86bfbcd5de874205b8e213934
+  sha256: 852110d6e331a02e5b8521960b240c657a60d76e4d8cca81193432577549a85f
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools_scm
   run:
     - python >=3.6
     - dask
