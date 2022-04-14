@@ -1,5 +1,5 @@
 {% set name = "rechunker" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 213ddb5ca4a25d0a6dbcc2feb3c1428e1d27b214df56beb1c633bc723fb6ffea
+  sha256: e0e6620b00d5c1688f16a22beb2ec1d10c37742a36fcec8e9b184591e5b30e7a
 
 build:
   noarch: python
