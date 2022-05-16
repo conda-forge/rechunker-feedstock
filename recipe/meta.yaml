@@ -16,14 +16,15 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
+    - python >=3.7
     - dask
     - zarr
     - xarray
+    - mypy_extensions
 
 test:
   imports:
