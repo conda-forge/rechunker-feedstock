@@ -16,15 +16,21 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools_scm
   run:
-    - python >=3.7
-    - dask
-    - zarr
-    - xarray
+    - python >=3.8
+    - zarr >=2.11
     - mypy_extensions
+    - dask
+    # dask[array]
+    - numpy >=1.21
+    # dask[diagnostics]
+    - bokeh >=2.4.2, <3
+    - jinja2 >=2.10.3
+    # extras but not all of the complete!?
+    - xarray >=2022.3
 
 test:
   imports:
@@ -55,3 +61,5 @@ extra:
     - davidbrochart
     - TomAugspurger
     - rabernat
+    - ocefpaf
+    - rsignell-usgs
