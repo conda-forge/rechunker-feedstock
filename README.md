@@ -1,11 +1,11 @@
-About rechunker
-===============
+About rechunker-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rechunker-feedstock/blob/main/LICENSE.txt)
 
 Home: https://rechunker.readthedocs.io
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rechunker-feedstock/blob/main/LICENSE.txt)
 
 Summary: Disk-to-disk chunk transformation for chunked arrays.
 
