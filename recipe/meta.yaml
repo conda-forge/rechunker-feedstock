@@ -1,5 +1,5 @@
 {% set name = "rechunker" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e0e6620b00d5c1688f16a22beb2ec1d10c37742a36fcec8e9b184591e5b30e7a
+  sha256: fb7cbeef0cec50e7c0731a76293317d6940e372925ae8479a7d4021cd394dcc8
 
 build:
   noarch: python
@@ -16,15 +16,21 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools_scm
   run:
-    - python >=3.7
-    - dask
-    - zarr
-    - xarray
+    - python >=3.8
+    - zarr >=2.11
     - mypy_extensions
+    - dask
+    # dask[array]
+    - numpy >=1.21
+    # dask[diagnostics]
+    - bokeh >=2.4.2, <3
+    - jinja2 >=2.10.3
+    # extras but not all of the complete!?
+    - xarray >=2022.3
 
 test:
   imports:
@@ -55,3 +61,5 @@ extra:
     - davidbrochart
     - TomAugspurger
     - rabernat
+    - ocefpaf
+    - rsignell-usgs
