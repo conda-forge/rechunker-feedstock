@@ -156,5 +156,7 @@ Feedstock Maintainers
 
 * [@TomAugspurger](https://github.com/TomAugspurger/)
 * [@davidbrochart](https://github.com/davidbrochart/)
+* [@ocefpaf](https://github.com/ocefpaf/)
 * [@rabernat](https://github.com/rabernat/)
+* [@rsignell-usgs](https://github.com/rsignell-usgs/)
 
