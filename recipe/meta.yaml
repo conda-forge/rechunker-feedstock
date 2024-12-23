@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 18c610cc65854b3627c4d511138a7b962281f8e00838f78148cbf765e1ba2fb2
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=42
     - setuptools-scm >=3.4
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - dask-core
     - mypy_extensions
     - zarr >=2.11
@@ -31,6 +31,7 @@ test:
     - rechunker
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
