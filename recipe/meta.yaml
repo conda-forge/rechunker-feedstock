@@ -1,5 +1,5 @@
 {% set name = "rechunker" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 18c610cc65854b3627c4d511138a7b962281f8e00838f78148cbf765e1ba2fb2
+  sha256: 8d45ed03c485ab9fa6095ca2edb46ffb5191d99ebee87b9cdabb88071422ee95
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
     - python >={{ python_min }}
     - dask-core
     - mypy_extensions
-    - zarr >=2.11
+    - zarr <3,>=2.11
 
 test:
   imports:
